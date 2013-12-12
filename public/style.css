@@ -1,0 +1,217 @@
+body
+{
+	background:url(image/back-2.jpg);
+}
+
+@font-face
+{
+	font-family: 'BebasNeueRegular';
+    src: url('fonts/BebasNeue-webfont.eot');
+    src: url('fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BebasNeue-webfont.woff') format('woff'),
+         url('fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('https://sites.google.com/site/directorybesttheme/font/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container
+{
+	width:1140px;
+	margin:auto;
+}
+
+.headingPane
+{
+	width:100%;
+	text-align:center;
+	color:#FFF;
+	font-family: 'BebasNeueRegular';
+	font-size:72px;
+	margin-bottom:30px;
+}
+
+.leftPane
+{
+	width:560px;
+	float:left;
+}
+
+.rightPane
+{
+	width:560px;
+	float:right;
+}
+
+.textPane
+{
+	text-align:center;
+	font-family: 'Raleway', sans-serif;
+	color:#FFF;
+	font-size:36px;
+	font-weight:100;
+}
+
+.line hr
+{
+	background:#FFF;
+	width:0.5px;
+	height:70px;
+	float:left;
+	margin-left:14px;
+}
+
+.imageBox img
+{
+	margin-left:24%;
+	margin-bottom:50px;
+}
+
+.column
+{
+	font-family: 'Raleway', sans-serif;
+	font-weight:300;
+	color:#FFF;
+	font-size:18px;
+}
+
+.column img
+{
+	vertical-align:middle;
+	margin-right:20px;
+}
+
+.clearfix
+{
+	clear:both;
+	display:block;
+}
+
+.rotate{
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+     
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+     
+    overflow:hidden;
+ 
+    }  
+ 
+.rotate:hover  
+{
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+}
+
+.click
+{
+	background:#44b7a8;
+	border-bottom:5px solid #37968a !important;
+	color:#FFF;
+	font-family: 'Raleway', sans-serif;
+	font-weight:300;
+	font-size:24px;
+	border:none;
+	padding:2px 10px;
+	cursor:pointer;
+	border-radius:2px;
+}
+
+.click2
+{
+	background:#3a97d8;
+	border-bottom:5px solid #1d7cbf !important;
+	color:#FFF;
+	font-family: 'Raleway', sans-serif;
+	font-weight:300;
+	font-size: 28px;
+	border: none;
+	padding: 8px 20px;
+	cursor:pointer;
+	margin-top:100px;
+	border-radius:4px;
+}
+
+.button
+{
+	margin: auto;
+	width: 100px;
+}
+
+.button2
+{
+	margin: auto;
+	width: 130px;
+}
+
+.congratzBox
+{
+	width:627px;
+	height:400px;
+	background:url(image/congratzBox.png) top center no-repeat;
+	margin:auto;
+	color:#FFF;
+	padding-top:150px;
+}
+
+.congratzText
+{
+	font-family: 'Raleway', sans-serif;
+	font-weight:300;
+	font-size:58px;
+	text-transform:uppercase;
+	text-align:center;
+}
+
+.winText
+{
+	font-family: 'Droid Sans', sans-serif;
+	font-weight:400;
+	font-size:56px;
+	text-align:center;
+	padding-top:50px;
+}
+
+.popup
+{
+	position:absolute;
+	display:none;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	border:8px solid #C90;
+	border-radius:4px;
+	background:url(image/bg.png);
+	z-index:1;
+}
+
+canvas
+{
+	cursor: crosshair;
+	display: block;
+	z-index:2;
+	position:absolute;
+	top:0;
+	border:0;
+	left:0;
+	right:0;
+	margin:0 !important;
+	width:100% !important;
+}
+
+.close
+{
+	position:absolute;
+	right:0;
+	top:0;
+	width:48px;
+	cursor:pointer;
+	z-index:999;
+}
