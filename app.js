@@ -1,7 +1,11 @@
 var express = require('express');
+var os = require('os');
 
+var port = 3000;
 var app = express();
-app.listen(3000);
+app.listen(port, function() {
+  console.log("listening at " + os.hostname() + ":" + port + " ...");
+});
 
 app.use(express.static(__dirname + "/public"));
 app.use(app.router);
