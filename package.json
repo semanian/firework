@@ -1,11 +1,20 @@
 {
   "name": "firework",
+  "description": "TouchLike extenstion for VPlus project",
   "version": "0.0.1",
+  "author": {
+    "name": "BJ Kang",
+    "email": "byungju.kang@gmail.com"
+  },
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
     "express": "~3.4.6",
+    "socket.io": "0.9.16"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
   }
 }

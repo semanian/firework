@@ -6,23 +6,46 @@
 <link href="style.css" rel="stylesheet" type="text/css">
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,100' rel='stylesheet' type='text/css'>
 
-<script type="text/javascript" src="js/jQuery.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!--<script type="text/javascript" src="js/jQuery.js"></script>-->
 <script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var nickname = '';
+        var socket = io.connect('http://10.0.1.13:5000', {
+            'reconnect': true,
+            'reconnection delay': 500,
+            'max reconnection attepmts': 10
+        });
+        socket.on('connect', function(data) {
+            if (nickname == '') {
+                nickname = prompt('What is your nickname?');
+            }
+            socket.emit('join', nickname);
+        });
+        socket.on('message', function(title, details) {
+            $(".congratzText").text(title);
+            $(".winText").text(details);
+            $("#draw").trigger("click");
+        });
+    });
+</script>
 </head>
 
 <body>
 <div class="container">
-    <div class="headingPane">PodoMall CRISTMAS EVENT</div>
+    <div class="headingPane">VPLUS CRISTMAS EVENT</div>
     <div class="leftPane">
         <div class="imageBox">
             <img src="./image/roullet.png" class="rotate">
         </div>
         <div class="textPane">
         	회원카드를 스캔하고</br>
-		1등 당첨을 행운을 확인하세요!</br>
+		1등 당첨의 행운을 확인하세요!</br>
 		꽝은 없습니다.
         </div>
-        <div class="button"><input type="button" value="돌리세요" class="click"></div>
+        <div class="button"><input type="button" value="돌리세요" id='draw' class="click"></div>
     </div>
     <div class="rightPane">
     	<div class="prizeDiv">
@@ -60,7 +83,6 @@
     	    <div class="congratzText">
                 축하합니다!	
             </div>
-        
             <div class="winText">
                 1등 당첨	
             </div>
